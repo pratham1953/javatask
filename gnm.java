@@ -11,6 +11,7 @@ public class gnm{
   
           // maximum value is 100 
         final int MAX = 100; 
+        int attempts=0;
   
         // takes input using scanner 
         Scanner in = new Scanner(System.in); 
@@ -28,7 +29,7 @@ public class gnm{
   
             System.out.println( 
                 "Guess a number between 1 and 100: "); 
-  
+                    attempts++;
             // guess value 
             guess = in.nextInt(); 
   
@@ -46,9 +47,10 @@ public class gnm{
             else { 
   
                 System.out.println( 
-                    "Yes, you guessed the number."); 
+                    "Yes, you guessed the number in"+attempts+"attempts"); 
   
                 correct = true; 
+                
             } 
         } 
         System.exit(0); 
